@@ -11,6 +11,7 @@
 		C6B20F5C29BE84B200FF9C52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B20F5B29BE84B200FF9C52 /* ContentView.swift */; };
 		C6B20F5E29BE84B400FF9C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6B20F5D29BE84B400FF9C52 /* Assets.xcassets */; };
 		C6B20F6129BE84B400FF9C52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6B20F6029BE84B400FF9C52 /* Preview Assets.xcassets */; };
+		C6B20F6A29BE86AA00FF9C52 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = C6B20F6929BE86AA00FF9C52 /* OpenAISwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6B20F6A29BE86AA00FF9C52 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = "ChatGPT-Toolbar";
+			packageProductDependencies = (
+				C6B20F6929BE86AA00FF9C52 /* OpenAISwift */,
+			);
 			productName = "ChatGPT-Toolbar";
 			productReference = C6B20F5629BE84B200FF9C52 /* ChatGPT-Toolbar.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +118,9 @@
 				Base,
 			);
 			mainGroup = C6B20F4D29BE84B200FF9C52;
+			packageReferences = (
+				C6B20F6829BE86AA00FF9C52 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = C6B20F5729BE84B200FF9C52 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -274,6 +282,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,6 +310,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -336,6 +346,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C6B20F6829BE86AA00FF9C52 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C6B20F6929BE86AA00FF9C52 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C6B20F6829BE86AA00FF9C52 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C6B20F4E29BE84B200FF9C52 /* Project object */;
 }
